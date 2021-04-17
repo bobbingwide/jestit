@@ -34,32 +34,65 @@ to testing Gutenberg blocks.
 - That my code will improve.
 - That I'll be able to use the test suite to migrate from hand cranked to more modern tooling and APIs.
 
+## Installation?
+Prerequisite: install node.js and npm.
+
+Follow the instructions from https://jestjs.io/docs/getting-started
+
+```
+cd \path\to\jestit
+npm install jest --save-dev
+```
+
+This creates the `node_modules` folder and `package-lock.json`.
+
+1. Install jest
+2. Create `sum.js` and `sum.test.js``   
+3. Update `package.json` to add the run command for jest
+4. npm run test
+```
+C:\apache\htdocs\wordpress\wp-content\plugins\jestit>npm run test
+
+> @ test C:\apache\htdocs\wordpress\wp-content\plugins\jestit
+> jest
+
+PASS  src/sum.test.js
+√ adds 1 + 2 to equal 3 (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        7.804 s
+Ran all test suites.
+```
 
 ## References
 - [Block Editor Handbook: Testing Overview](https://developer.wordpress.org/block-editor/contributors/code/testing-overview/)
 - [Jest](https://jestjs.io/)
+- [@wordpress/create-block](https://github.com/WordPress/gutenberg/tree/trunk/packages/create-block)  
 - tbc
 
 ## My block plugins
 
-Plugin | # blocks | Notes
+Plugin | # blocks/variations | Notes
 ------ | -------- | ------
-bigram | 1 | Seen-before, apiVersion: 2
-oik    |  6        | Hand cranked webconfig
+bigram | 1 | @wordpress/create-block, seen-before, apiVersion: 2
+oik  |  6  | Hand cranked webconfig
 oik-blocks | 20 | Hand cranked webconfig
 oik-bob-bing-wide | 5 | Hand cranked webconfig
 oik-css | 2 | Hand cranked webconfig
-oik-magnetic-poetry | 1 |  
-oik-squeeze | 1 | 
-sb-breadcrumbs-block | 1 | 
-sb-chart-block | 1 |
-sb-children-block | 1 |
-sb-coming-up | 1 | 
-sb-field-block | 1 |
-sb-parent-block | 1 |
-sb-toolicons-block | 4 | 
-uk-tides | 1 |
-wp-top-12 | 1 | 
+oik-magnetic-poetry | 1 |  Hand cranked
+oik-squeeze | 1 |  @wordpress/create-block
+sb-breadcrumbs-block | 1 | @wordpress/create-block
+sb-chart-block | 1 | @wordpress/create-block
+sb-children-block | 1 | @wordpress/create-block
+sb-coming-up | 1 | @wordpress/create-block
+sb-field-block | 1 | @wordpress/create-block
+sb-parent-block | 1 | @wordpress/create-block
+sb-prevnext-block | 1 | @wordpress/create-block
+sb-toolicons-block | 4 | @wordpress/create-block
+uk-tides | 1 | Hand cranked webconfig
+wp-top-12 | 1 | @wordpress/create-block
 
 
 
